@@ -11,7 +11,7 @@ public class QueueB{
 
         }
 
-        public static boolean isEmplty(){
+        public static boolean isEmpty(){
             return rear == -1;
         }
 
@@ -43,24 +43,25 @@ public class QueueB{
 
         // peek
         public static int peek(){
-            if(isEmplty()){
+            if(isEmpty()){
                 System.out.println("empty queue");
                 return -1;
             }
             return arr[0];
         }
+    }    
 
-        public static void main(String[] args) {
-            Queue q = new Queue(5);
-            q.add(1);
-            q.add(2);
-            q.add(3);
+    public static void main(String[] args) {
+        Queue q = new Queue(5);
+        q.add(1);
+        q.add(2);
+        q.add(3);
 
-            while(!q.isEmpty()){
-                System.out.println(q.peek());
-                q.remove();
-            }
+        while(!q.isEmpty()){
+            System.out.println(q.peek());
+            q.remove();
         }
     }
+    
 
 }
